@@ -23,4 +23,8 @@ app.use("/api/v1/user", userRouter)
 app.use("/api/v1/post", postRouter)
 app.use("/api/v1/emotion", emotionRouter)
 
+
+const { sendMessage } = require("./controllers/chat.contoller")
+app.post("/api/v1/send-message", sendMessage)
+
 module.exports = { app }

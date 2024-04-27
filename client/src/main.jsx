@@ -9,6 +9,7 @@ import SignUp from './Components/SignUp.jsx'
 import Login from './Components/Login.jsx'
 import Community from './Components/Community.jsx';
 import Education from './Components/Education.jsx';
+import User from './Components/User.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />
+  },
+  {
+    path: "/user",
+    element: <User />
   }
 ])
 

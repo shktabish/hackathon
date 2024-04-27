@@ -2,6 +2,7 @@ import { useState } from "react"
 import { IoIosArrowBack } from "react-icons/io"
 import api from './../utils/axios'
 import toast from "react-hot-toast"
+import { Link } from "react-router-dom"
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -14,6 +15,10 @@ const Login = () => {
         email,
         password
       })
+      toast.success(res.data.message)
+      setEmail('')
+      setPassword('')
+      window.location.href = '/user';
     } catch (error) {
       console.log(error)
       toast.error(error.response.data.error)
@@ -22,11 +27,11 @@ const Login = () => {
 
   return (
     <div className="h-screen w-full grid grid-cols-2 max-md:grid-cols-1"> 
-        <div className="bg-red-500 h-full max-md:hidden">
-
+        <div className="h-full overflow-hidden flex items-center justify-center p-10 max-md:hidden">
+          <img className="h-full object-contain" src="./login.jpg"/>
         </div>
         <div className="py-24 px-10">
-            <div className="flex gap-3 items-center"><IoIosArrowBack className="inline-block" /> <span>Back to website</span></div>
+            <Link to="/" className="flex gap-3 items-center"><IoIosArrowBack className="inline-block" /> <span to="/">Back to website</span></Link>
             <div className="text-3xl font-semibold mt-10">Welcome!</div>
             <div className="text-sm mt-3"><span className="font-bold underline cursor-pointer">Create a free account</span> or login to get started using <span>I am fine</span></div>
             <form onSubmit={handleSubmit} className="flex flex-col gap-2 mt-10">
