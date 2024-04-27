@@ -7,6 +7,8 @@ import { Toaster } from 'react-hot-toast';
 import Hero from './Components/Hero.jsx'
 import SignUp from './Components/SignUp.jsx'
 import Login from './Components/Login.jsx'
+import Community from './Components/Community.jsx';
+import Education from './Components/Education.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,5 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Toaster position='bottom-right' />
     <RouterProvider router={router}/>
+    {/* <Education /> */}
+    {/* <Community /> */}
   </React.StrictMode>,
 )

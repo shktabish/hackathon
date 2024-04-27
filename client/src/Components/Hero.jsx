@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import WaterDropGrid from './Ui/WaterDropGrid'
+import WaterDropGrid from './ui/WaterDropGrid'
 
 const Hero = () => {
   return (
