@@ -38,7 +38,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Toaster position='bottom-right' />
     <RouterProvider router={router}/>
-    {/* <Education /> */}
     {/* <Community /> */}
   </React.StrictMode>,
 )

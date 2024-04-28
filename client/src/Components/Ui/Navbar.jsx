@@ -44,7 +44,7 @@ const Navbar = () => {
                     }
                 `}
             </style>
-            <div className="flex gap-4 items-center py-2 px-4">
+            <div className="flex gap-8 items-center py-2 px-4">
                 <div className="text-lg">KMS</div>
                 <div className="hover-2 text-lg">Therapist</div>
                 <div className="hover-2 text-lg">Education</div>
@@ -52,7 +52,7 @@ const Navbar = () => {
                 <div className="hover-2 text-lg mr-auto">User</div>
                 <div className="hover-2 text-lg">{userData.name}</div>
                 <img src={userData.avatar} className="w-12 h-12 rounded-full hover-2" />
-                <div className="bg-[#3B3E45] rounded-full py-3 px-8 text-white font-semibold">Logout</div>
+                <div className="bg-[#6366F1] rounded-full py-3 px-8 text-[white] font-semibold">Logout</div>
             </div>
         </div>
     );

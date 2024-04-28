@@ -44,7 +44,7 @@ const ChatBot = () => {
 
   useEffect(() => {
     const fetchInitialMessage = async () => {
-      const res = await api.post("/initial-message");
+      const res = await api.post("/send-message");
       const initialMessage = res.data.response;
       setChatMessages([{ text: `AI: ${formatResponse(initialMessage)}`, sender: 'bot' }]);
     }
@@ -70,7 +70,7 @@ const ChatBot = () => {
     <>
       <div className="fixed bottom-[50px] right-[50px] z-[51]">
         <motion.div 
-          className={`relative rounded-[25px] bg-black flex flex-col-reverse items-start py-6 px-3 ${isActive? "overflow-y-scroll" : "overflow-y-hidden"} chat-container`}
+          className={`relative rounded-[25px] bg-[#37383c] flex flex-col-reverse items-start py-6 px-3 ${isActive? "overflow-y-scroll" : "overflow-y-hidden"} chat-container`}
           variants={variant}
           animate={isActive? "open" : "close"}
           initial="close"
