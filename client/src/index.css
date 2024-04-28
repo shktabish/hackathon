@@ -38,3 +38,8 @@
   ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(255, 255, 255, 0.3);
   }
+
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
