@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaRegComment } from "react-icons/fa6";
 import api from "../utils/axios";
 import Comment from '../Components/Ui/Comment'; // Import the Comment component
+import Navbar from './Ui/Navbar';
 
 export default function App() {
   const [posts, setPosts] = useState([]);
@@ -21,6 +22,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col gap-5 h-full w-screen">
+      <Navbar />
       {posts.map((post) => (
         <div
           key={post._id}
