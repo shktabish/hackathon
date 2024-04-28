@@ -4,6 +4,7 @@ import { MdLocationOn } from "react-icons/md"
 import { FaStar } from "react-icons/fa6"
 import { FaPhoneAlt } from "react-icons/fa"
 import { GiPathDistance } from "react-icons/gi"
+import Navbar from './Ui/Navbar';
 
 const MusicCard = ({ doctor }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -12,17 +13,17 @@ const MusicCard = ({ doctor }) => {
         <div
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className={`w-72 flex-auto ${isHovered ? 'bg-white/10' : 'bg-white/5'} p-2 mx-4 my-2 relative flex flex-col justify-around rounded-md transition-all duration-300`}
+            className={`w-72 flex-auto ${isHovered ? 'bg-white/50' : 'bg-white'} p-2 mx-4 my-2 relative flex flex-col justify-around rounded-md transition-all duration-300`}
         >
             <img src={doctor.image} alt="doctor's image" className="w-full mb-4 rounded-md" />
-            <p className="text-white mb-1">{doctor.name}</p>
-            <a target='_blank' href={`http://www.google.com/maps/place/${doctor.latitude},${doctor.longitude}`} className="text-[#b3b3b3] hover:text-[#b3b3b3] hover:underline mb-1"><MdLocationOn className='inline-block'/> {doctor.address}</a>
-            <p className="text-[#b3b3b3] mb-1"><FaPhoneAlt className='inline-block'/> {doctor.phone}</p>
+            <p className="text-black mb-1">{doctor.name}</p>
+            <a target='_blank' href={`http://www.google.com/maps/place/${doctor.latitude},${doctor.longitude}`} className="text-black hover:text-black hover:underline mb-1"><MdLocationOn className='inline-block'/> {doctor.address}</a>
+            <p className="text-black mb-1"><FaPhoneAlt className='inline-block'/> {doctor.phone}</p>
             <div className='flex gap-4'>
-                <p className="text-[#b3b3b3] mb-1"><FaStar className='inline-block'/> {doctor.stars}</p>
-                <p className="text-[#b3b3b3] mb-1"><GiPathDistance className='inline-block' /> {doctor.distance.toFixed(2)} km</p>
+                <p className="text-black mb-1"><FaStar className='inline-block'/> {doctor.stars}</p>
+                <p className="text-black mb-1"><GiPathDistance className='inline-block' /> {doctor.distance.toFixed(2)} km</p>
             </div>
-            <a className='text-white' href={doctor.appointment}>Book an appointment</a>
+            <a className='text-black' href={doctor.appointment}>Book an appointment</a>
         </div>
     )
 }
@@ -88,8 +89,9 @@ const NearestDoctors = () => {
     }, [userLocation]);
 
     return (
-        <div className="p-4 bg-[#3B3E45]">
-            <h1 className="text-6xl font-semibold ml-6 font-Grotesk mb-4">Nearest Doctors</h1>
+        <div className="p-4 min-h-screen bg-[#E0E9F5]">
+            <Navbar />
+            <h1 className="text-6xl font-semibold ml-6 font-Grotesk mb-4 text-center">Nearest Doctors</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {sortedDoctors.map((doctor, index) => (
                     <MusicCard key={index} doctor={doctor} />

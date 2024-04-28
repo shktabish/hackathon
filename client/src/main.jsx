@@ -37,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "/near-me",
     element: <NearestDoctors />
+  },
+  {
+    path: "/community",
+    element: <Community />
   }
 ])
 
@@ -44,6 +48,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Toaster position='bottom-right' />
     <RouterProvider router={router}/>
-    {/* <Community /> */}
   </React.StrictMode>,
 )
