@@ -1,6 +1,6 @@
 import Home from "./Home"
-import ChatBot from "./ui/ChatBot"
-import Navbar from "./ui/Navbar"
+import ChatBot from "./Ui/ChatBot"
+import Navbar from "./Ui/Navbar"
 import Moodpage from './Moodpage';
 
 const User = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
-import BarPoll from './ui/BarPoll'
-import Benifits from './ui/Benifits'
-import Navbar from './ui/Navbar'
+import BarPoll from './Ui/BarPoll'
+import Benifits from './Ui/Benifits'
+import Navbar from './Ui/Navbar'
 import { points } from '../constants/data'
 
 function Education() {

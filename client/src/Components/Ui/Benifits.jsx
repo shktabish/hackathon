@@ -1,5 +1,5 @@
 import React from "react";
-import { LayoutGrid } from "../ui/layout-grid";
+import { LayoutGrid } from "./layout-grid";
 
 function Benifits() {
   const SkeletonOne = () => {

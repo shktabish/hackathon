@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useEffect } from "react"
-import BlurryCursor from "./ui/Cursor"
+import BlurryCursor from "./Ui/Cursor"
 import { Link } from "react-router-dom"
 
 const Hero = () => {
