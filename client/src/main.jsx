@@ -10,6 +10,8 @@ import Login from './Components/Login.jsx'
 import Community from './Components/Community.jsx';
 import Education from './Components/Education.jsx';
 import User from './Components/User.jsx';
+import NearestDoctors from './Components/Nearest';
+import Navbar from './Components/Ui/Navbar.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/education",
     element: <Education />
+  },
+  {
+    path: "/near-me",
+    element: <NearestDoctors />
   }
 ])
 

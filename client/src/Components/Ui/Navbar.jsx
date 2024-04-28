@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../../utils/axios";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [userData, setUserData] = useState("");
@@ -44,12 +45,12 @@ const Navbar = () => {
                     }
                 `}
             </style>
-            <div className="flex gap-8 items-center py-2 px-4">
-                <div className="text-lg">KMS</div>
-                <div className="hover-2 text-lg">Therapist</div>
-                <div className="hover-2 text-lg">Education</div>
+            <div className="w-full flex gap-8 items-center py-2 px-4">
+                <img src="./logo.svg" className="h-10" />
+                <Link to="/near-me" className="hover-2 text-lg">Therapist</Link>
+                <Link to="/education" className="hover-2 text-lg">Education</Link>
                 <div className="hover-2 text-lg">Community</div>
-                <div className="hover-2 text-lg mr-auto">User</div>
+                <Link to="/user" className="hover-2 text-lg mr-auto">User</Link>
                 <div className="hover-2 text-lg">{userData.name}</div>
                 <img src={userData.avatar} className="w-12 h-12 rounded-full hover-2" />
                 <div className="bg-[#6366F1] rounded-full py-3 px-8 text-[white] font-semibold">Logout</div>
